@@ -45,7 +45,7 @@ The site will showcase my projects, skills, and experience in software engineeri
 In the meantime, feel free to connect:  
 
 - GitHub: [github.com/BeamlakF](https://github.com/BeamlakF)  
-- Email: beamlakfekadu@gmail.com  
+- Email: beamlakfekadu562@gmail.com  
 
 ---
 
