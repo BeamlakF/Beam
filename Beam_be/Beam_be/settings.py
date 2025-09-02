@@ -52,7 +52,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "fekadu_backend.urls"
+ROOT_URLCONF = "Beam_be.urls"
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "fekadu_backend.wsgi.application"
+WSGI_APPLICATION = "Beam_be.wsgi.application"
 
 # -------------------------
 # DATABASE
@@ -78,7 +78,7 @@ DATABASES = {
     "default": dj_database_url.config(
         default=os.getenv(
             "DATABASE_URL",
-            "mysql://root:hello17!@localhost:3306/fekadu_portfolio"
+            "mysql://root:hello17!@localhost:3306/beam_portfolio"
         ),
         conn_max_age=600,
     )
