@@ -21,8 +21,8 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "dev-key")
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 
 ALLOWED_HOSTS = os.getenv(
-    "fekadu.onrender.com",
-    "localhost,127.0.0.1,fekadu.onrender.com"
+    "beam.onrender.com",
+    "localhost,127.0.0.1,beam.onrender.com"
 ).split(",")
 
 # -------------------------
