@@ -42,8 +42,8 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",  # serve static files in prod
-    "corsheaders.middleware.CorsMiddleware",       # handle CORS
+    "whitenoise.middleware.WhiteNoiseMiddleware",  
+    "corsheaders.middleware.CorsMiddleware",      
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -139,7 +139,7 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # -------------------------
 CORS_ALLOWED_ORIGINS = os.getenv(
     "CORS_ALLOWED_ORIGINS",
-    "fekadu.onrender.com"
+    "Beam.onrender.com"
 ).split(",")
 CORS_ALLOW_ALL_ORIGINS = False
 

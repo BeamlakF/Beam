@@ -1,13 +1,10 @@
 from rest_framework import serializers
-from .models import Articles, Subscriber, ContactMessage
+from .models import Articles, ContactMessage
 
-class SubscriberSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Subscriber
-        fields = '__all__'
+
 
 class ArticlesSerializer(serializers.ModelSerializer):
-    image = serializers.ImageField(use_url=True)  # <-- ensure use_url=True
+    image = serializers.ImageField(use_url=True)  
 
     class Meta:
         model = Articles
