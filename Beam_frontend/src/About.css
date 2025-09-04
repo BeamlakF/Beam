@@ -1,0 +1,47 @@
+#about {
+  padding: 80px 60px;
+  background-color: #f2f2f7;
+  color: #1a1a1a;
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+/* Headings */
+#about h2 {
+  font-size: 3rem;
+  color: #059afd;
+  margin-bottom: 20px;
+}
+
+/* Paragraphs */
+#about p {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+  #about {
+    padding: 60px 40px;
+  }
+  #about h2 {
+    font-size: 2.2rem;
+  }
+  #about p {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #about {
+    padding: 40px 20px;
+  }
+  #about h2 {
+    font-size: 1.8rem;
+  }
+  #about p {
+    font-size: 1rem;
+  }
+}

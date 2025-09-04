@@ -1,0 +1,45 @@
+.article-detail {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #f7f2f2;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.article-detail h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.detail-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.detail-content {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #0077cc;
+  color: #f7f2f2;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.back-button:hover {
+  background: #005fa3;
+}

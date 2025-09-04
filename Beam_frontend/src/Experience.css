@@ -1,0 +1,104 @@
+.experience-page {
+  padding: 60px;
+  background-color: #f7f2f2;
+  color: #1a1a1a;
+}
+
+.experience-page h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #059afd;
+  text-align: center;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.experience-box {
+  display: flex;
+  align-items: flex-start;
+  background-color: #f7f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(26,26,26,0.3);
+  transition: transform 0.2s ease;
+}
+
+.experience-box:hover {
+  transform: translateY(-4px);
+}
+
+.experience-year {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #059afd;
+  min-width: 80px; 
+  padding-right: 30px;
+  padding-top: 40px;
+  padding-left: 5px;
+}
+
+.experience-details {
+  flex: 1;
+}
+
+.experience-details h3 {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  color: #1a1a1a;
+}
+
+.experience-details p {
+  font-size: 1rem;
+  color: #1a1a1a;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+  .experience-page {
+    padding: 50px 40px;
+  }
+
+  .experience-page h2 {
+    font-size: 2.2rem;
+  }
+
+  .experience-year {
+    font-size: 1.2rem;
+    padding-right: 20px;
+    padding-top: 30px;
+  }
+
+  .experience-details h3 {
+    font-size: 1.4rem;
+  }
+
+  .experience-details p {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .experience-box {
+    flex-direction: column; /* stack year and details vertically */
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .experience-year {
+    padding-top: 0;
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .experience-details h3 {
+    font-size: 1.2rem;
+  }
+
+  .experience-details p {
+    font-size: 0.9rem;
+  }
+}
