@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Article, ContactMessage, CV
+from .models import Articles, ContactMessage, CV
 
-admin.site.register(Article)
+admin.site.register(Articles)
 admin.site.register(ContactMessage)
 admin.site.register(CV)
