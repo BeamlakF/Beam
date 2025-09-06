@@ -1,5 +1,6 @@
 from rest_framework import generics
 from rest_framework.permissions import IsAdminUser, AllowAny
+from rest_framework.response import Response
 from django.core.mail import send_mail, send_mass_mail
 from django.conf import settings
 
@@ -13,7 +14,7 @@ from .serializers import ArticleSerializer, ContactMessageSerializer, CVSerializ
 
 class PublicArticleListView(generics.ListAPIView):
     """Public can see only published articles"""
-    queryset = Article.objects.filter(is_published=True).order_by("-created_at")
+    queryset = Article.objects.filter(is_published=True).order_by("-published_at")  # ✅ fixed
     serializer_class = ArticleSerializer
     permission_classes = [AllowAny]
 
@@ -24,7 +25,7 @@ class ArticleDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ArticleSerializer
 
     def get_permissions(self):
-        if self.request.method in ["PUT", "PATCH", "DELETE", "POST"]:
+        if self.request.method in ["PUT", "PATCH", "DELETE"]:
             return [IsAdminUser()]
         return [AllowAny()]
 
@@ -41,12 +42,14 @@ class ArticleCreateView(generics.CreateAPIView):
         subject = f"📰 New Article: {article.title}"
         message = f"{article.content[:200]}...\n\nRead more on the website."
         from_email = settings.DEFAULT_FROM_EMAIL
-
-        # Example: notify subscribers (if you add a Subscriber model later)
+        # Example: notify subscribers if model exists later
         # recipient_list = [sub.email for sub in Subscriber.objects.all()]
-        # messages = [(subject, message, from_email, [email]) for email in recipient_list]
         # send_mass_mail(messages, fail_silently=True)
 
+
+# ==============================
+# 📌 Contact Messages
+# ==============================
 
 class ContactMessageListView(generics.ListAPIView):
     """Admin can view all contact messages"""
@@ -64,16 +67,16 @@ class ContactMessageCreateView(generics.CreateAPIView):
     def perform_create(self, serializer):
         contact = serializer.save()
 
-        # 1️⃣ Send email notification to the lawyer
+        # 1️⃣ Notify the lawyer
         send_mail(
             subject=f"📩 New Consultation from {contact.name}",
             message=f"Message from {contact.name} ({contact.email}):\n\n{contact.message}",
             from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[settings.DEFAULT_FROM_EMAIL],  # your email
+            recipient_list=[settings.DEFAULT_FROM_EMAIL],
             fail_silently=False,
         )
 
-        # 2️⃣ Send confirmation email to the sender
+        # 2️⃣ Confirmation to sender
         send_mail(
             subject="✅ Your message has been received",
             message=(
@@ -84,12 +87,14 @@ class ContactMessageCreateView(generics.CreateAPIView):
                 f"{contact.message}"
             ),
             from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[contact.email],   # sender’s email
+            recipient_list=[contact.email],
             fail_silently=False,
         )
 
 
-from rest_framework.response import Response
+# ==============================
+# 📌 CV Download
+# ==============================
 
 class CVDownloadView(generics.RetrieveAPIView):
     """Return latest CV file URL"""
