@@ -3,25 +3,16 @@ import React from "react";
 function Experience() {
   const experiences = [
     {
-      year: "1986-1990",
-      job: "Education-Addis Ababa University",
-      description: "Bachelor of Law-LLB"
+      year: "2000-2014",
+      job: "Education-Cruise Steps School",
+      description: "High School diploma"
     },
     {
-      year: "1991-1994",
-      job: "Junior Attorney",
+      year: "2014-present",
+      job: "Education-Addis Ababa University",
       description: "In house attorney at Development Bank of Ethiopia"
     },
-    {
-      year: "1994-2006",
-      job: "Judge",
-      description: "Judge at Addis Ababa's city court and Federal court"
-    },
-    {
-      year: "2006 -now",
-      job: "Attorney",
-      description: "Consultation and Representation "
-    }
+    
   ];
 
   return (

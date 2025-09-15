@@ -23,7 +23,7 @@ function Contact() {
     setError("");
 
     try {
-      const response = await fetch("https://fekadu.onrender.com/contact/",{
+      const response = await fetch("https://beam.onrender.com/contact/",{
         method: "POST",
         headers: {
           "Content-Type": "application/json",

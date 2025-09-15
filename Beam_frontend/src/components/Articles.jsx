@@ -8,7 +8,7 @@ function Articles() {
 
   useEffect(() => {
     axios
-      .get("https://fekadu.onrender.com/articles/")
+      .get("https://beam.onrender.com/articles/")
       .then((res) => setArticles(res.data))
       .catch((err) => {
         console.error(err);
