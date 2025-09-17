@@ -1,60 +1,35 @@
-:root {
-  --bg-color: #0f1117;   /* editor dark */
-  --fg-color: #e6e6e6;   /* light text */
-  --accent-blue: #61afef;
-  --accent-green: #98c379;
-  --accent-purple: #c678dd;
-  --muted: #5c6370;
-  --border: #2c313c;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Fira Code', 'JetBrains Mono', 'Source Code Pro', monospace;
-  background-color: var(--bg-color);
-  color: var(--fg-color);
-  line-height: 1.6;
-}
-
-h1, h2, h3 {
-  font-weight: 600;
-  color: var(--accent-blue);
-  margin-bottom: 0.5rem;
-}
-
-p {
-  color: var(--fg-color);
-  margin-bottom: 1rem;
-}
-
-a {
-  color: var(--accent-green);
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-code, pre {
+#about {
+  max-width: 800px;
+  margin: 120px auto 80px;
+  padding: 0 20px;
   font-family: 'Fira Code', monospace;
-  background: #1e1e2e;
-  color: var(--accent-purple);
-  padding: 0.3em 0.5em;
-  border-radius: 6px;
-  border: 1px solid var(--border);
+  color: #1a1a1a;
+  line-height: 1.7;
 }
 
-button {
-  font-family: inherit;
-  background: var(--accent-blue);
-  color: #fff;
-  padding: 0.6rem 1rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s;
+#about h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #059afd;
+  border-bottom: 2px solid rgba(74, 5, 134, 0.2);
+  display: inline-block;
+  padding-bottom: 4px;
 }
-button:hover {
-  background: #528dcf;
+
+#about p {
+  margin-bottom: 1rem;
+  font-size: 0.98rem;
+}
+
+#about .prompt {
+  color: #059afd;
+  font-weight: 600;
+}
+
+#about code {
+  background: rgba(74, 5, 134, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9rem;
 }
