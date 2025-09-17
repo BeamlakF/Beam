@@ -1,65 +1,75 @@
-.articles-h2{
-  font-size: 2.4rem;
+.articles-h2 {
+  font-size: 1.8rem;
   margin-bottom: 30px;
   color: #059afd;
-  
+  font-family: 'Fira Code', monospace;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  border-bottom: 2px solid rgba(74, 5, 134, 0.2);
+  display: inline-block;
+  padding-bottom: 4px;
 }
-
 
 .articles-page {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 22px;
   padding: 30px;
 }
 
 .article-box {
   background: #f7f2f2;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.07);
+  padding: 18px;
   text-align: left;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: 'Fira Code', monospace;
 }
 
 .article-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  border-color: rgba(74, 5, 134, 0.2);
 }
 
 .article-box img {
   width: 100%;
   height: 160px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  
+  border-radius: 6px;
+  margin-bottom: 14px;
 }
 
 .article-box h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #333;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+  font-weight: 600;
+  letter-spacing: -0.3px;
 }
 
 .article-box p {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
 }
 
 .see-more-button {
   display: inline-block;
   margin-top: 12px;
-  padding: 8px 14px;
-  background-color: #0077cc;
+  padding: 6px 12px;
+  background-color: #059afd;
   color: #fff;
   text-decoration: none;
-  border-radius: 6px;
-  font-size: 14px;
-  transition: background 0.2s ease;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-family: 'Fira Code', monospace;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .see-more-button:hover {
-  background-color: #005fa3;
+  background-color: #054bfd;
+  transform: scale(1.05);
 }
