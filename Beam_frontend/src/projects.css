@@ -1,0 +1,120 @@
+html, body {
+  background-color: #f7f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.services-h1 {
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  color: #059afd;
+  text-align: center;
+}
+
+.services-page {
+  padding: 60px;
+  background-color: #f7f2f2;
+  color: #1a1a1a;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.services-page h2 {
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  color: #059afd;
+  text-align: center;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.service-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  width: 260px;
+  box-shadow: 0 4px 10px rgba(26,26,26,0.3);
+  transition: transform 0.2s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-4px);
+}
+
+.service-box img {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+.service-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.service-box p {
+  font-size: 1rem;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+  .services-page {
+    padding: 50px 40px;
+  }
+
+  .services-page h2,
+  .services-h1 {
+    font-size: 2rem;
+  }
+
+  .service-box {
+    width: 45%; /* 2 per row on tablets */
+    padding: 18px;
+  }
+
+  .service-box img {
+    width: 50px;
+    margin-bottom: 12px;
+  }
+
+  .service-box h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-box p {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .services-container {
+    gap: 15px;
+  }
+
+  .service-box {
+    width: 80%;/* full width on phones */
+    padding: 15px;
+  }
+
+  .service-box img {
+    width: 40px;
+  }
+
+  .service-box h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-box p {
+    font-size: 0.9rem;
+  }
+}

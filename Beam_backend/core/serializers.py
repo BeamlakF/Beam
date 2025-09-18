@@ -1,10 +1,15 @@
 from rest_framework import serializers
-from .models import Article, ContactMessage, CV
+from .models import Article, ContactMessage, CV, Project
 
 class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Article
         fields = "__all__"
+
+class ProjectSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Project
+        fields ="__all__"
 
 class ContactMessageSerializer(serializers.ModelSerializer):
     class Meta:

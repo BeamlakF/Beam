@@ -4,10 +4,10 @@ import Home from "./components/Home"
 import './Home.css'
 import Experience from "./components/Experience";
 import './Experience.css'
-import Services from "./components/Services";
+import Services from "./components/Projects";
 import Articles from "./components/Articles";
 import './Articles.css';
-import './services.css';
+import './projects.css';
 import ArticleDetail from "./components/ArticleDetail";
 import './ArticleDetail.css'
 import { Routes, Route } from "react-router-dom";

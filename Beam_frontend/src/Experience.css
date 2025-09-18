@@ -1,44 +1,52 @@
 .experience-page {
   padding: 60px;
-  background-color: #f7f2f2;
-  color: #1a1a1a;
+  background-color: #0d1117; /* deep dark (GitHub vibes) */
+  color: #c9d1d9; /* softer gray-white */
+  font-family: "JetBrains Mono", "Fira Code", monospace; /* dev typeface */
 }
 
 .experience-page h2 {
-  font-size: 3rem;
-  margin-bottom: 30px;
-  color: #059afd;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #58a6ff; /* softer dev blue */
   text-align: center;
+  letter-spacing: -1px;
+  font-weight: 700;
+  border-bottom: 2px solid rgba(88, 166, 255, 0.3);
+  display: inline-block;
+  padding-bottom: 8px;
 }
 
 .experience-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
 
 .experience-box {
   display: flex;
   align-items: flex-start;
-  background-color: #f7f2f2;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(26,26,26,0.3);
-  transition: transform 0.2s ease;
+  background-color: #161b22; /* card bg */
+  padding: 22px 28px;
+  border-radius: 10px;
+  border: 1px solid rgba(240, 246, 252, 0.1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease, border 0.25s ease;
 }
 
 .experience-box:hover {
   transform: translateY(-4px);
+  border: 1px solid #58a6ff;
 }
 
 .experience-year {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #059afd;
-  min-width: 80px; 
-  padding-right: 30px;
-  padding-top: 40px;
-  padding-left: 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #58a6ff;
+  min-width: 90px;
+  padding-right: 28px;
+  padding-top: 38px;
+  font-family: "JetBrains Mono", monospace;
 }
 
 .experience-details {
@@ -46,14 +54,16 @@
 }
 
 .experience-details h3 {
-  font-size: 1.6rem;
-  margin-bottom: 5px;
-  color: #1a1a1a;
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+  color: #f0f6fc; /* near white */
+  font-weight: 600;
 }
 
 .experience-details p {
-  font-size: 1rem;
-  color: #1a1a1a;
+  font-size: 0.95rem;
+  color: #8b949e; /* subtle gray */
+  line-height: 1.6;
 }
 
 /* Responsive adjustments */
@@ -67,25 +77,25 @@
   }
 
   .experience-year {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding-right: 20px;
-    padding-top: 30px;
+    padding-top: 28px;
   }
 
   .experience-details h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .experience-details p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
 
 @media screen and (max-width: 600px) {
   .experience-box {
-    flex-direction: column; /* stack year and details vertically */
+    flex-direction: column;
     align-items: flex-start;
-    padding: 15px;
+    padding: 18px;
   }
 
   .experience-year {
@@ -95,10 +105,10 @@
   }
 
   .experience-details h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .experience-details p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 }

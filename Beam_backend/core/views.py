@@ -1,11 +1,11 @@
 from rest_framework import generics
 from rest_framework.permissions import IsAdminUser, AllowAny
 from rest_framework.response import Response
-from django.core.mail import send_mail, send_mass_mail
+from django.core.mail import send_mail
 from django.conf import settings
 
-from .models import Article, ContactMessage, CV
-from .serializers import ArticleSerializer, ContactMessageSerializer, CVSerializer
+from .models import Article, ContactMessage, CV, Project
+from .serializers import ArticleSerializer, ContactMessageSerializer, CVSerializer, ProjectSerializer
 
 
 # ==============================
@@ -45,6 +45,21 @@ class ArticleCreateView(generics.CreateAPIView):
         # Example: notify subscribers if model exists later
         # recipient_list = [sub.email for sub in Subscriber.objects.all()]
         # send_mass_mail(messages, fail_silently=True)
+
+
+
+class PublicProjectListView(generics.ListAPIView):
+    """Public can see only published projects"""
+    queryset = Project.objects.filter(is_published=True).order_by("-created_at")
+    serializer_class = ProjectSerializer
+    permission_classes = [AllowAny]
+
+
+class ProjectCreateView(generics.CreateAPIView):
+    """Admin creates project"""
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
+    permission_classes = [IsAdminUser]        
 
 
 # ==============================

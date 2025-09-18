@@ -10,7 +10,7 @@ function Experience() {
     {
       year: "2014-present",
       job: "Education-Addis Ababa University",
-      description: "In house attorney at Development Bank of Ethiopia"
+      description: "Bachelor of Science in Software Engineering"
     },
     
   ];
