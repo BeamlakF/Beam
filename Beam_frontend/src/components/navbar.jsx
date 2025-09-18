@@ -18,7 +18,7 @@ function Navbar() {
     <nav className={scrolled ? "navbar scrolled" : "navbar"}>
       <div className="logo">
         <img src="/logo.png" alt="law" />
-        <h1>Fekadu Hailemariam</h1>
+        <h1>Beam</h1>
       </div>
 
       {/* Hamburger */}
