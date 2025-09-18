@@ -57,7 +57,7 @@ function Contact() {
       <div className="contact-container">
         <div className="contact-form">
           <h2>Contact Me</h2>
-          <p>For legal inquiries, consultations, or appointments, please reach out using the form below.</p>
+          <p>I am always eager and open to work with you so go ahead and fill out the form</p>
 
           <form onSubmit={handleSubmit}>
             <label>Full Name:</label>
@@ -105,11 +105,11 @@ function Contact() {
         </div>
 
         <div className="office-info">
-          <h3>Office Information</h3>
-          <p><strong>Law Office of Fekadu Hailemariam</strong></p>
-          <p>Email: fekadu164@gmail.com</p>
-          <p>Phone: +251-911-769-346</p>
-          <p>Address: Nur Building, Lideta<br/>Addis Ababa, Ethiopia</p>
+          <h3>Find me here:</h3>
+          
+          <p>Email: beamlakfekadu562@gmail.com@gmail.com</p>
+          <p>Phone: +251-979-027-679</p>
+          <p>Address: Addis Ababa University<br/>Addis Ababa, Ethiopia</p>
         </div>
       </div>
     </div>

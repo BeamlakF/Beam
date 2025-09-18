@@ -9,7 +9,7 @@ function ArticleDetail() {
 
   useEffect(() => {
     axios
-      .get(`https://fekadu.onrender.com/articles/${id}/`)
+      .get(`https://beam.onrender.com/articles/${id}/`)
       .then((res) => setArticle(res.data))
       .catch((err) => {
         console.error(err);
