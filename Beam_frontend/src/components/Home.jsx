@@ -14,15 +14,15 @@ function Home() {
 
       {/* Hero image */}
       <div className="hero-image">
-        <img src="/Fekadu.jpg" alt="Lawyer" />
+        <img src="/hero.jpg" alt="Beam" />
       </div>
 
       {/* Hero content */}
       <div className="hero-content">
-        <h1 className="fade-in">Fekadu Hailemariam</h1>
-        <p className="fade-in delay-1">Senior Attorney at Law</p>
+        <h1 className="fade-in">Beamlak Fekadu </h1>
+        <p className="fade-in delay-1"> </p>
         <button className="contact-button fade-in delay-2">
-          <a href="#contact">Schedule a Consultation</a>
+          <a href="#contact">Checkout my CV</a>
         </button>
       </div>
     </section>

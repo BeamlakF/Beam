@@ -26,7 +26,7 @@ function Experience() {
 
   return (
     <div id = "portfolio" className="experience-page">
-      <h2>Professional Experience</h2>
+      <h2>My Portfolio</h2>
       <div className="experience-list">
         {experiences.map((exp, index) => (
           <div key={index} className="experience-box">

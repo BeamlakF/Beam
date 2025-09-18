@@ -44,8 +44,8 @@ function Navbar() {
             </HashLink>
           </li>
           <li>
-            <HashLink smooth to="/#services" onClick={() => setMenuOpen(false)}>
-              Services
+            <HashLink smooth to="/#projects" onClick={() => setMenuOpen(false)}>
+              projects
             </HashLink>
           </li>
           <li>
