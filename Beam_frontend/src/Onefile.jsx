@@ -124,19 +124,22 @@ export default function BeamProfile() {
 
       <main>
         <section className="hero">
-          <div className="hero-text">
-            <h1>Hello! This is Beamlak.</h1>
-            <h2>Software Engineer and Designer</h2>
-            <p>
-              Junior Software Engineer with a strong foundation in web development, backend systems, and UI/UX and
-              graphic design. Experienced in building secure and scalable web applications using Django and Node.js.
-              Passionate about continuous learning in data structures and algorithms.
-            </p>
-          </div>
-          <div className="hero-image">
-            <img src="/images/Beam.jpg" alt="Portrait of Beamlak" className="rect-image" />
-          </div>
-        </section>
+  <div className="hero-text">
+    <h1>Hello! This is Beamlak.</h1>
+    <h2>Software Engineer and Designer</h2>
+    <p>
+      Junior Software Engineer with a strong foundation in web development,
+      backend systems, and UI/UX and graphic design. Experienced in building
+      secure and scalable web applications using Django and Node.js. Passionate
+      about continuous learning in data structures and algorithms.
+    </p>
+    <a href="#portfolio" className="hero-button">View Portfolio</a>
+  </div>
+  <div className="hero-image">
+    <img src="./Beam.jpg" alt="Portrait of Beamlak" className="rect-image" />
+  </div>
+</section>
+
 
         <Articles />
 
@@ -162,25 +165,25 @@ export default function BeamProfile() {
           <h3>Development Portfolio</h3>
           <div className="portfolio-grid">
             <article>
-              <img src="/images/job.png" alt="Job Platform Project Preview" />
+              <img src="./job.png" alt="Job Platform Project Preview" />
               <h4>Job Platform Backend</h4>
               <p><em>Django, JWT Auth, PostgreSQL, Swagger API</em></p>
               <p>Built a RESTful API with secure authentication and documentation.</p>
             </article>
             <article>
-              <img src="/images/Beam.png" alt="Portfolio Website Screenshot" />
+              <img src="./Beam.png" alt="Portfolio Website Screenshot" />
               <h4>Portfolio Websites</h4>
               <p><em>React, Django, PostgreSQL</em></p>
               <p>Developed full-stack portfolio websites showcasing professional work.</p>
             </article>
             <article>
-              <img src="/images/Library.png" alt="Smart Library Project Preview" />
+              <img src="./Library.png" alt="Smart Library Project Preview" />
               <h4>Smart Library Management API</h4>
               <p><em>Django, Swagger, Redis, Docker</em></p>
               <p>Developed a scalable API with caching and containerization.</p>
             </article>
             <article>
-              <img src="/images/TaskFlow.png" alt="TaskFLOW Project Preview" />
+              <img src="/TaskFlow.png" alt="TaskFLOW Project Preview" />
               <h4>TaskFLOW - Team Task Manager</h4>
               <p><em>Django, JWT Auth, PostgreSQL</em></p>
               <p>Developed a scalable API for team and task management.</p>
