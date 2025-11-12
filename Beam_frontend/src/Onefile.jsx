@@ -141,8 +141,6 @@ export default function BeamProfile() {
 </section>
 
 
-        <Articles />
-
         <section className="experiences">
           <h3>Experiences</h3>
           <ul>
@@ -232,6 +230,8 @@ export default function BeamProfile() {
             </div>
           ))}
         </section>
+
+         <Articles />
 
         <section id="contact">
           <h3>Contact Me</h3>
