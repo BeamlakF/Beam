@@ -112,18 +112,20 @@ export default function BeamProfile() {
       <header>
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Download CV</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Skills</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#design-portfolio">My designs</a></li>
+            <li><a href="#Articles">Articles</a></li>
             <li><a href="#contact">Contact Me</a></li>
+
           </ul>
         </nav>
       </header>
 
       <main>
-        <section className="hero">
+        <section id = "home"className="hero">
   <div className="hero-text">
     <h1>Hello! This is Beamlak.</h1>
     <h2>Software Engineer and Designer</h2>
@@ -141,7 +143,7 @@ export default function BeamProfile() {
 </section>
 
 
-        <section className="experiences">
+        <section id = "experience"className="experiences">
           <h3>Experiences</h3>
           <ul>
             <li>
@@ -205,7 +207,7 @@ export default function BeamProfile() {
               <figcaption>UI/UX mockup for a modern admin dashboard interface.</figcaption>
             </figure>
             <figure>
-              <img src="/images/mobile-app-ui.jpg" alt="Mobile App UI Design" />
+              <img src="./Beam.png" alt="Mobile App UI Design" />
               <figcaption>Clean, minimal mobile app design concept focused on usability.</figcaption>
             </figure>
           </div>
@@ -255,12 +257,13 @@ export default function BeamProfile() {
           <div className="footer-links">
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Me</a></li>
-              <li><a href="#">Download CV</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Skills</a></li>
-              <li><a href="#contact">Contact Me</a></li>
+              <li><a href="#home">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#design-portfolio">My Designs</a></li>
+            <li><a href="#Articles">Articles</a></li>
+            <li><a href="#contact">Contact Me</a></li>
             </ul>
           </div>
 
