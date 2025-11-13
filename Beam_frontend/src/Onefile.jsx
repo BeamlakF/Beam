@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import "./Beam.css";
 
-const API_BASE = "https://beam.onrender.com/api"; // Backend API base
+const API_BASE = "https://beam-jw63.onrender.com/api"; // Backend API base
 
 // ===== ARTICLES LIST =====
 export function Articles() {
