@@ -16,7 +16,8 @@ SECRET_KEY = 'django-insecure-l^v@1xx-q^um=$49#%nnx0h#av(#18)-jc^f#%egu&z*^#uuq0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["beam-jw63.onrender.com", "localhost",
+    "127.0.0.1",]
 
 
 # Application definition
