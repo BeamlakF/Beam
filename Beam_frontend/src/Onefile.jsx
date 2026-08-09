@@ -98,6 +98,7 @@ export function ArticleDetail() {
 export default function BeamProfile() {
   const [cvLink, setCvLink] = useState("");
   const [devProjects, setDevProjects] = useState([]);
+  // eslint-disable-next-line no-unused-vars
   const [designProjects, setDesignProjects] = useState([]);
 
   // Fetch CV download link
@@ -153,7 +154,7 @@ export default function BeamProfile() {
             <li><a href="#experience">Experience</a></li>
             <li><a href="#volunteering">Volunteering</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#design-portfolio">My Designs</a></li>
+            {/* <li><a href="#design-portfolio">My Designs</a></li> */}
             <li><a href="#articles">Articles</a></li>
             <li><a href="#contact">Contact Me</a></li>
           </ul>
@@ -271,6 +272,24 @@ export default function BeamProfile() {
           </div>
         </section>
 
+        {/* ===== Design Portfolio (disabled until backend is ready) =====
+        <section id="design-portfolio">
+          <span className="section-kicker">Design</span>
+          <h3 className="section-title">Design Portfolio</h3>
+          <div className="design-gallery">
+            {designProjects.length === 0 ? (
+              <p className="empty-state">No design projects available.</p>
+            ) : (
+              designProjects.map((p) => (
+                <figure key={p.id}>
+                  {p.cover_image && <img src={p.cover_image} alt={p.title} />}
+                  <figcaption>{p.title}</figcaption>
+                </figure>
+              ))
+            )}
+          </div>
+        </section>
+        ===== end Design Portfolio ===== */}
 
         {/* ===== Articles ===== */}
         <Articles />
@@ -303,7 +322,7 @@ export default function BeamProfile() {
               <li><a href="#experience">Experience</a></li>
               <li><a href="#volunteering">Volunteering</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#design-portfolio">My Designs</a></li>
+              {/* <li><a href="#design-portfolio">My Designs</a></li> */}
               <li><a href="#articles">Articles</a></li>
               <li><a href="#contact">Contact Me</a></li>
             </ul>
