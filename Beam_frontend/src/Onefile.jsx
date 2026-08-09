@@ -20,13 +20,14 @@ export function Articles() {
       });
   }, []);
 
-  if (error) return <p>{error}</p>;
+  if (error) return <p className="empty-state">{error}</p>;
 
   return (
     <div id="articles" className="articles-page">
-      <h2 className="articles-h2">Latest Articles</h2>
+      <span className="section-kicker">Writing</span>
+      <h2 className="section-title">Latest Articles</h2>
       {articles.length === 0 ? (
-        <p>No articles available</p>
+        <p className="empty-state">No articles available</p>
       ) : (
         articles.slice(0, 5).map((article) => (
           <div key={article.id} className="article-box">
@@ -76,8 +77,8 @@ export function ArticleDetail() {
       });
   }, [slug]);
 
-  if (error) return <p>{error}</p>;
-  if (!article) return <p>Loading...</p>;
+  if (error) return <p className="empty-state">{error}</p>;
+  if (!article) return <p className="empty-state">Loading...</p>;
 
   return (
     <div className="article-detail">
@@ -146,10 +147,11 @@ export default function BeamProfile() {
     <div className="beam-root">
       <header>
         <nav>
+          <a href="#home" className="brand">Beam<span>.</span></a>
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#volunteering">Volunteering</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#design-portfolio">My Designs</a></li>
             <li><a href="#articles">Articles</a></li>
@@ -162,13 +164,14 @@ export default function BeamProfile() {
         {/* ===== HERO ===== */}
         <section id="home" className="hero">
           <div className="hero-text">
+            <span className="hero-badge">My journey starts with me</span>
             <h1>Hello! This is Beamlak.</h1>
             <h2>Software Engineer and Designer</h2>
             <p>
               Junior Software Engineer with a strong foundation in web development,
               backend systems, and UI/UX and graphic design. Experienced in building
-              secure and scalable web applications using Django and Node.js. Passionate
-              about continuous learning in data structures and algorithms.
+              secure and scalable web applications using Django, SpringBoot and Node.js. Passionate
+              about continuous learning in cloud computing and AI.
             </p>
             {cvLink ? (
               <a href={cvLink} download="Beamlak_CV.pdf" className="hero-button">
@@ -183,43 +186,85 @@ export default function BeamProfile() {
           </div>
         </section>
 
-        {/* ===== Experiences ===== */}
+        {/* ===== Experience ===== */}
         <section id="experience" className="experiences">
-          <h3>Experiences</h3>
+          <span className="section-kicker">Where I've Worked</span>
+          <h3 className="section-title">Experience</h3>
           <ul>
             <li>
-              <strong>Graphic Design Intern</strong> <em>Halwote Hareg Design Studio</em>
+              <strong>Junior Software Developer</strong> <em>INSA</em>
+              <i>Feb 2025 - present</i>
+              <p>Working on development and documentation of ITAS.</p>
+            </li>
+            <li>
+              <strong>Software Product Tester &amp; Graphics Designer Intern</strong> <em>EDit Educational Services</em>
+              <i>Dec 2025 - April 2026</i>
+              <p>Worked on marketing posters and software product testing and maintenance.</p>
+            </li>
+            <li>
+              <strong>Junior Graphic Designer</strong> <em>Halwote Hareg Design Studio</em>
+              <i>Feb 2025 - Oct 2025</i>
               <p>Designed branding materials for clients. Created user-friendly experiences based on client requirements.</p>
             </li>
+          </ul>
+        </section>
+
+        {/* ===== Volunteering ===== */}
+        <section id="volunteering" className="experiences volunteering">
+          <span className="section-kicker">Extra-curricular</span>
+          <h3 className="section-title">Volunteering</h3>
+          <ul>
             <li>
-              <strong>Participant in the Software Development Program</strong> <em>Women Techsters Bootcamp</em>
-              <p>Attending classes focused on empowering women in technology and enhancing technical expertise.</p>
+              <strong>Project Organizer</strong> <em>GDG AAU core technical team</em>
+              <i>Nov 2025 - present</i>
+              <p>Developed the backend system of Unilearn-university life navigation system.</p>
             </li>
             <li>
-              <strong>Software Engineering Student</strong> <em>ALX Africa</em>
-              <p>Completed an intensive software engineering program focused on problem-solving, collaboration, and real-world project development.</p>
+              <strong>Editor of GDG insider</strong> <em>GDG AAU core social media team</em>
+              <i>April 2025 - present</i>
+              <p>Worked on marketing posters and also sole designer and writer of GDG Insider magazine</p>
+            </li>
+            <li>
+              <strong>Director of Marketing</strong> <em>AWS Student Builder Group</em>
+              <i>July 2026 - present</i>
+              <p>Developing on Marketing and Promotion of AWS and cloud systems.</p>
+            </li>
+            <li>
+              <strong>Apprentice</strong> <em>Thrive Student club</em>
+              <i>Nov 2026 - May 2026</i>
+              <p>Working on teaching materials for students and assisting during lectures</p>
+            </li>
+            <li>
+              <strong>Member</strong> <em>Aiesec in Ethiopia</em>
+              <i>Aug 2026 - Member</i>
+              <p>Working with the MAC OC with marketing posters</p>
             </li>
           </ul>
         </section>
 
         {/* ===== Development Portfolio ===== */}
         <section id="portfolio">
-          <h3>Development Portfolio</h3>
+          <span className="section-kicker">Development</span>
+          <h3 className="section-title">Development Portfolio</h3>
           <div className="portfolio-grid">
             {devProjects.length === 0 ? (
-              <p>No development projects available.</p>
+              <p className="empty-state">No development projects available.</p>
             ) : (
               devProjects.map((p) => (
                 <article key={p.id}>
                   {p.cover_image && <img src={p.cover_image} alt={p.title} />}
-                  <h4>{p.title}</h4>
-                  <p><em>{p.description}</em></p>
-                  {p.live_url && (
-                    <p><a href={p.live_url} target="_blank" rel="noreferrer">Live Demo</a></p>
-                  )}
-                  {p.repo_url && (
-                    <p><a href={p.repo_url} target="_blank" rel="noreferrer">GitHub Repo</a></p>
-                  )}
+                  <div className="portfolio-card-body">
+                    <h4>{p.title}</h4>
+                    <p><em>{p.description}</em></p>
+                    <div className="portfolio-card-links">
+                      {p.live_url && (
+                        <a href={p.live_url} target="_blank" rel="noreferrer">Live Demo</a>
+                      )}
+                      {p.repo_url && (
+                        <a href={p.repo_url} target="_blank" rel="noreferrer">GitHub Repo</a>
+                      )}
+                    </div>
+                  </div>
                 </article>
               ))
             )}
@@ -228,10 +273,11 @@ export default function BeamProfile() {
 
         {/* ===== Design Portfolio ===== */}
         <section id="design-portfolio">
-          <h3>Design Portfolio</h3>
+          <span className="section-kicker">Design</span>
+          <h3 className="section-title">Design Portfolio</h3>
           <div className="design-gallery">
             {designProjects.length === 0 ? (
-              <p>No design projects available.</p>
+              <p className="empty-state">No design projects available.</p>
             ) : (
               designProjects.map((p) => (
                 <figure key={p.id}>
@@ -243,25 +289,13 @@ export default function BeamProfile() {
           </div>
         </section>
 
-        {/* ===== Skills ===== */}
-        <section id="skills">
-          <h3>Skills</h3>
-          {[["Django", "70%"], ["HTML", "60%"], ["CSS", "50%"], ["JavaScript", "50%"], ["React", "20%"], ["Node.js", "40%"], ["Adobe CC", "90%"]].map(([skill, width]) => (
-            <div className="skill" key={skill}>
-              <label>{skill}</label>
-              <div className="progress-bar">
-                <div className="fill" style={{ "--target-width": width }}></div>
-              </div>
-            </div>
-          ))}
-        </section>
-
         {/* ===== Articles ===== */}
         <Articles />
 
         {/* ===== Contact Form ===== */}
         <section id="contact">
-          <h3>Contact Me</h3>
+          <span className="section-kicker">Get In Touch</span>
+          <h3 className="section-title">Contact Me</h3>
           <form onSubmit={handleContactSubmit}>
             <label htmlFor="name">Name</label>
             <input id="name" name="name" type="text" placeholder="Your name" required />
@@ -284,7 +318,7 @@ export default function BeamProfile() {
             <ul>
               <li><a href="#home">Home</a></li>
               <li><a href="#experience">Experience</a></li>
-              <li><a href="#skills">Skills</a></li>
+              <li><a href="#volunteering">Volunteering</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
               <li><a href="#design-portfolio">My Designs</a></li>
               <li><a href="#articles">Articles</a></li>
