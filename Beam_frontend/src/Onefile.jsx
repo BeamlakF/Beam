@@ -271,23 +271,6 @@ export default function BeamProfile() {
           </div>
         </section>
 
-        {/* ===== Design Portfolio ===== */}
-        <section id="design-portfolio">
-          <span className="section-kicker">Design</span>
-          <h3 className="section-title">Design Portfolio</h3>
-          <div className="design-gallery">
-            {designProjects.length === 0 ? (
-              <p className="empty-state">No design projects available.</p>
-            ) : (
-              designProjects.map((p) => (
-                <figure key={p.id}>
-                  {p.cover_image && <img src={p.cover_image} alt={p.title} />}
-                  <figcaption>{p.title}</figcaption>
-                </figure>
-              ))
-            )}
-          </div>
-        </section>
 
         {/* ===== Articles ===== */}
         <Articles />
